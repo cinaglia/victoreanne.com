@@ -1,0 +1,59 @@
+//==============================================================================
+//
+// ABOUT US
+//
+//==============================================================================
+#about-us {
+	position: relative;
+
+	h3 ul {
+		li {
+			span {
+				margin-top: 38px;
+			}
+
+			img {
+				background: white;
+			}
+		}
+
+		.anne {
+			text-align: left;
+
+			img {
+				float: left;
+				padding-left: 10px;
+			}
+		}
+
+		.victor {
+			text-align: right;
+
+			img {
+				float: right;
+				padding-right: 10px;
+			}
+		}
+	}
+
+	.small-logo {
+		$smallLogoWidth: elements-sprite-width(logo-small);
+		@include elements-sprite(logo-small);
+		@include hide-text();
+		position: absolute;
+		top: 24px;
+		left: 50%;
+		margin-left: - ($smallLogoWidth/2);
+	}
+
+	.description {
+		margin-top: 15px;
+
+		.anne { text-align: left; }
+ 		.victor { text-align: right; }
+
+		.signature {
+			color: $lightBlue;
+		}
+	}
+}

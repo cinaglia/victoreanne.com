@@ -1,0 +1,61 @@
+/* ------------------------- */
+/* HEADER: Navigation menu   */
+/* ------------------------- */
+header {
+
+	#main-navigation {
+		background: $lightBlue;
+		position: fixed;
+		width: 100%;
+		height: 90px;
+		z-index: 2;
+		top: 0;
+		left: 0;
+
+		#logo {
+			@include elements-sprite(logo);
+			@include hide-text();
+			margin: 15px 0;
+			float: left;
+		}
+
+		ul {
+			float: right;
+			padding: 34px 0 0;
+
+			li {
+				display: inline-block;
+				margin: 0 -2px;
+
+				a {
+					text-decoration: none;
+					color: white;
+					display: block;
+					padding: 0 12px 12px;
+					border-bottom: solid 2px #B2CBD2;
+				}
+
+				/* ie7 fix */
+				zoom: 1;
+				*display: inline;
+			}
+
+			li a:hover,
+			.active a {
+				border-bottom-color: white;
+			}
+		}
+	}
+
+	.callout {
+		@extend .calloutBackground;
+		position: relative;
+		z-index: 1;
+
+		.button {
+			letter-spacing: 2px;
+			font-size: 20px;
+			padding: 7px 36px;
+		}
+	}
+}

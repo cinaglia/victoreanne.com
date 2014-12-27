@@ -1,0 +1,22 @@
+#!/bin/bash
+
+SRC='./src'
+DIST='./dist'
+REMOTE='victor@cinaglia.com:/var/www/victoreanne.com/public_html/'
+TARGET="$1"
+
+# Ensure a target is defined.
+if [ -z $TARGET ]
+then
+	echo "Please provide a target (production, dev)."
+	exit;
+fi
+
+# Rsync to prod or dev based on the given target.
+if [ "$1" = "production" ]
+then
+	rsync -avz --exclude-from 'exclude.rsync' $SRC/* $REMOTE
+elif [ "$1" == "dev" ]
+then
+	rsync -avz --exclude-from 'exclude.rsync' $SRC/* $DIST
+fi

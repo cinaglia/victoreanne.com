@@ -1,0 +1,111 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	padding: 90px 0 30px;
+}
+
+strong {
+	font-weight: 400;
+}
+
+.merri {
+	font-family: 'Merriweather', sans-serif;
+	font-weight: 300;
+}
+
+.calloutBackground {
+	background: url(../img/light-watermark.png) no-repeat center center $calloutGrey;
+	color: $darkGrey;
+	text-align: center;
+	padding: 60px 0;
+
+	h2, h4 {
+		margin-bottom: 30px;
+		font-size: 33px;
+		@extend .merri;
+	}
+
+	p {
+		padding: 0 100px;
+		font-weight: 300;
+		font-size: 1.1em;
+		line-height: 1.2em;
+		margin-bottom: 30px;
+	}
+}
+
+.content {
+
+	h3 {
+		color: $darkGrey;
+		font-weight: 300;
+		text-align: center;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		background: url(../img/h3-pixel.png) repeat-x center;
+
+		span {
+			display: inline-block;
+			padding: 0 10px;
+			background: white;
+		}
+	}
+
+	.section {
+		margin-top: -90px;
+		padding: 100px 0 20px;
+	}
+}
+
+.text {
+	p {
+		color: $darkGrey;
+		margin-bottom: 15px;
+		line-height: 1.3em;
+	}
+}
+
+//==============================================================================
+//
+// BUTTON STYLES
+//
+//==============================================================================
+.button {
+	text-transform: uppercase;
+	background-color: $lightBlue;
+	border: none;
+	color: white;
+	text-decoration: none;
+	@include box-shadow(0 0 2px 1px rgba(0, 0, 0, 0.1));
+	@include text-shadow(0 1px 0 rgba(0, 0, 0, 0.1));
+
+	@include border-radius(3px, 3px);
+
+	a & {
+		display: inline-block;
+	}
+
+	&:hover {
+		background-color: $superLightBlue;
+	}
+
+	&:active {
+		background-color: $darkerLightBlue;
+	}
+}
+
+//==============================================================================
+//
+// GO TO TOP
+//
+//==============================================================================
+
+.go-top {
+	@include elements-sprite(top);	
+	@include hide-text();
+	display: block;
+	position: fixed;
+	bottom: 45px;
+	right: 15px;
+	z-index: 5;
+}

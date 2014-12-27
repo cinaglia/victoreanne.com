@@ -1,0 +1,33 @@
+/* ----------------- */
+/* R.S.V.P           */
+/* ----------------- */
+
+#rsvp {
+	@extend .calloutBackground;
+
+	ul {
+		li {
+			display: inline-block;
+			&.confirmation {
+				text-align: left;
+				label {
+					display: inline-block;
+					padding-bottom: 3px;
+				}
+			}
+		}
+
+		input {
+			@extend .merri;
+			padding: 8px 15px 4px;
+			font-size: 28px;
+			border: 0;
+		}
+	}
+
+	.loading input[type=submit] {
+		color: transparent;
+		background: $lightBlue url(../img/loader.gif) no-repeat center center;
+		@include text-shadow(0 0 0);
+	}
+}

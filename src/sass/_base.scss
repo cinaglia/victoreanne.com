@@ -1,0 +1,40 @@
+//==============================================================================
+//
+// CROSS-BROWSER SUPPORT CONFIGURATION
+// http://compass-style.org/reference/compass/support/
+//
+//==============================================================================
+
+//==============================================================================
+//
+// FRMEWORK UTILITIES
+//
+//==============================================================================
+
+@import "compass";
+@import "compass/reset";
+@import "compass/css3/border-radius";
+@import "compass/css3/box-shadow";
+@import "compass/css3/text-shadow";
+@import "compass/typography/text/replacement";
+
+//==============================================================================
+//
+// SPRITES
+//
+//==============================================================================
+@import "elements/*.png";
+$elements-sprite-dimensions: true;
+
+
+//==============================================================================
+//
+// CUSTOM VARIABLES
+//
+//==============================================================================
+$darkGrey: #666;
+$lightGrey: #E2E2E2;
+$calloutGrey: #EEE;
+$lightBlue: #9DBDC6;
+$superLightBlue: #A3C3CF;
+$darkerLightBlue: #8FAAB7;

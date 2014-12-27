@@ -1,0 +1,8 @@
+.sass-cache/
+sass/
+resources/
+sprites_src/
+config.rb
+sync
+exclude.rsync
+*.DS_Store*
